@@ -1,23 +1,68 @@
 aid: atlas-space
+
 name: ATLAS Space Operations
-description: 'ATLAS Space Operations is a company surfaced via the API Evangelist harvest backlog (source:
-  space) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://atlasspace.com/wp-content/uploads/2023/08/ATLAS-Featured-Image-08_12_2023.png
+
+description: "ATLAS Space Operations provides a federated ground network and software-as-a-service solutions for satellite operations, including launch and early orbit phase (LEOP) support, commercial, civil, and federal space missions. The company offers Freedom Ground Software as a Service™ and a collaborative platform to manage ground station resources, enabling customers to streamline mission control, data downlink, and operational workflows across a global network."
+
 url: https://raw.githubusercontent.com/api-evangelist/atlas-space/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:space
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-23'
+
 modified: '2026-09-23'
+
 tags:
 - Company
-apis: []
+- Space
+- SaaS
+- Ground-Network
+- Satellite-Operations
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atlas-space-hosts.yml
+- type: DomainSecurity
+  url: security/atlas-space-domain-security.yml
 - type: Website
   url: https://atlasground.com/
+- type: Blog
+  url: https://atlasspace.com/news/
+- type: Support
+  url: https://atlasspace.com/contact/
+- type: Documentation
+  url: https://atlasspace.com/solutions/
+- type: GettingStarted
+  url: https://atlasspace.com/apply/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Provider documentation is HTML only with no OpenAPI, AsyncAPI, GraphQL, gRPC or WSDL contracts discovered.
+  evidence:
+    - url: https://atlasspace.com/solutions/
+      status: 200
+  checked: 2026-09-23
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
